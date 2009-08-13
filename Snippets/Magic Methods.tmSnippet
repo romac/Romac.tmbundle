@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>public function __get( \$name )
+{
+    if( \$this-&gt;__isset( \$name ) ) {
+        
+        return \$this-&gt;${1:_data}[ \$name ];
+    
+    }
+    
+    return ${2:NULL};
+}
+
+public function __set( \$name, \$value )
+{
+    \$this-&gt;$1[ \$name ] = \$value;
+    
+    return \$this;
+}
+
+public function __isset( \$name )
+{
+    return isset( \$this-&gt;$1[ \$name ] );
+}
+
+public function __unset( \$name )
+{
+    unset( \$this-&gt;$1[ \$name ] );
+    
+    return \$this;
+}
+
+</string>
+	<key>name</key>
+	<string>Magic Methods</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>magic_m</string>
+	<key>uuid</key>
+	<string>3E09BB5C-DCD1-48AF-BE9D-A55606F9FE3C</string>
+</dict>
+</plist>

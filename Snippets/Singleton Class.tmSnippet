@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/**
+* A reference to this class instance.
+*
+* @var ${1:`#!/opt/local/bin/php
+&lt;?php
+
+$path = $_SERVER[ 'TM_FILEPATH' ];
+
+if( isset( $_SERVER[ 'TM_PROJECT_DIRECTORY' ] ) ) {
+
+$path = str_replace( $_SERVER[ 'TM_PROJECT_DIRECTORY' ], '', $path );
+$path = str_replace( '/', '_', $path );
+$path = substr( $path, 1 );
+
+} else {
+
+$path = explode( '/', $path );
+$path = array_pop( $path );
+}
+
+$path = str_replace( '.class.php', '', $path );
+$path = str_replace( 'Classes_', '', $path );
+
+if( isset( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) &amp;&amp; !empty( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) ) {
+
+$path = $_SERVER[ 'ROMAC_CLASS_PREFIX' ] . '_' . $path;
+}
+
+print $path;
+`} object.
+*/
+private static \$_instance = NULL;
+
+
+/**
+* Class constructor.
+* The constructor of this class cannot be used to instanciate a $1 object.
+* This class is a singleton class, this means that there is only one instance
+* of the $1 class and this instance is shared by every one who does a call
+* to $1::getInstance().
+*
+* @see getInstance to know how to create the $1 instance or to get a reference to it.
+*/
+private function __construct()
+{
+
+}
+
+/**
+* Creates or returns the only instance of the $1 class.
+*
+* @return $1 the only instance of the $1 class.
+*/
+public static function getInstance()
+{
+if( !is_object( self::\$_instance ) ) {
+
+self::\$_instance = new self();
+}
+
+return self::\$_instance;
+}
+
+/**
+* Create a clone of the instance.
+* Because this class is a singleton class, there can exists only one
+* instance of this class.
+* So this method will throw an exception if someone tries to call it.
+*
+* @throws BadMethodCallException An new BadMethodCallException instance
+* @return void
+*/
+final public function __clone()
+{
+throw new BadMethodCallException(
+'This class is a singleton class, you are not allowed to clone it.' . "\n" .
+'Please call ' . get_class( \$this ) . '::getInstance() to get a reference to ' .
+'the only instance of this class.'
+);
+}
+
+/**
+* This method is called when unserialize is called on a serialized representation
+* of an instance of this class.
+* Because this class is a singleton class, there can exists only one
+* instance of this class.
+* So this method will throw an exception if someone tries to call it.
+*
+* @throws BadMethodCallException An new BadMethodCallException instance
+* @return void
+*/
+final public function __wakeup()
+{
+throw new BadMethodCallException(
+'This class is a singleton class, you are not allowed to unserialize ' .
+'it as this could create a new instance of it.' . "\n" .
+'Please call ' . get_class( \$this ) . '::getInstance() to get a reference to ' .
+'the only instance of this class.'
+);
+}</string>
+	<key>name</key>
+	<string>Singleton Class</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>single_c</string>
+	<key>uuid</key>
+	<string>ADB0FAF2-2272-4133-AE50-14CD83A07BF2</string>
+</dict>
+</plist>

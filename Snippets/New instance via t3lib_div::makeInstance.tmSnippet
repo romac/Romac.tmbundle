@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>t3lib_div::makeInstance( '${1:ClassName}' );$0</string>
+	<key>name</key>
+	<string>New instance via t3lib_div::makeInstance</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>t3new</string>
+	<key>uuid</key>
+	<string>D028E421-0735-487F-BA96-7972695A7B67</string>
+</dict>
+</plist>

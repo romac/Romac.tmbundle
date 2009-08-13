@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;VirtualHost *:80&gt;
+ServerName ${1:server-name}.dev
+ServerAdmin romain.ruetschi@gmail.com
+DocumentRoot /Library/Servers/vhosts/${2:000}-$1/htdocs
+ServerAlias www.$1.dev
+ErrorLog /Library/Servers/vhosts/$2-$1/logs/error.log
+CustomLog /Library/Servers/vhosts/$2-$1/logs/access.log common
+Options +All +Multiviews +Indexes +FollowSymLinks
+ScriptAlias /cgi-bin/ "/Library/Servers/vhosts/$2-$1/cgi-bin/"
+&lt;Directory "/Library/Servers/vhosts/$2-$1/htdocs"&gt;
+Options Indexes FollowSymLinks
+Order allow,deny
+Allow from all
+AllowOverride All
+&lt;/Directory&gt;
+&lt;IfModule mod_php5.c&gt;
+php_admin_value open_basedir "/Library/Servers/0-Packages:/Library/Servers/vhosts/$2-$1:/var/tmp:/tmp:/opt/local/lib/php/php"
+php_admin_value upload_tmp_dir "/Library/Servers/vhosts/$2-$1/_sys/tmp"
+php_admin_value session.safe_path "/Library/Servers/vhosts/$2-$1/_sys/sessions"
+&lt;/IfModule&gt;
+&lt;IfModule mod_security2.c&gt;
+SecUploadDir "/Library/Servers/vhosts/$2-$1/_sys/tmp"
+&lt;/IfModule&gt;
+&lt;/VirtualHost&gt;</string>
+	<key>name</key>
+	<string>Virtual Host</string>
+	<key>scope</key>
+	<string>source.apache-config</string>
+	<key>tabTrigger</key>
+	<string>vhost</string>
+	<key>uuid</key>
+	<string>7D3690C8-B97F-48D7-ACFA-E98642E41E77</string>
+</dict>
+</plist>

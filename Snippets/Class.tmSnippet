@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?php
+
+/*
+* Copyright (c) 2009, Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+* Code licensed under the BSD License:
+* See http://romac.github.com/files/BSD.txt
+*/
+
+/**
+* Source file containing class $1.
+* 
+* @package    $7
+* @license    http://romac.github.com/files/BSD.txt New BSD License
+* @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+* @version    ${ROMAC_VERSION:0.1}
+* @see        $1
+*/
+
+/**
+* Class $1.
+* 
+* Description for class $1.
+*
+* @package    ${7:`#!/opt/local/bin/php
+&lt;?php
+
+if( isset( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) &amp;&amp; !empty( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) ) {
+
+$package = $_SERVER[ 'ROMAC_CLASS_PREFIX' ];
+
+} else {
+
+$package = 'default';
+}
+
+print $package;`}
+* @license    http://romac.github.com/files/BSD.txt New BSD License
+* @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+* @version    ${ROMAC_VERSION:0.1}
+*/
+${2:abstract }class ${1:`#!/opt/local/bin/php
+&lt;?php
+
+$path = $_SERVER[ 'TM_FILEPATH' ];
+
+if( isset( $_SERVER[ 'TM_PROJECT_DIRECTORY' ] ) ) {
+
+$path = str_replace( $_SERVER[ 'TM_PROJECT_DIRECTORY' ], '', $path );
+$path = str_replace( '/', '_', $path );
+$path = substr( $path, 1 );
+
+} else {
+
+$path = explode( '/', $path );
+$path = array_pop( $path );
+}
+
+$path = str_replace( '.class.php', '', $path );
+$path = str_replace( 'Classes_', '', $path );
+
+if( isset( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) &amp;&amp; !empty( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) ) {
+
+$path = $_SERVER[ 'ROMAC_CLASS_PREFIX' ] . '_' . $path;
+}
+
+print $path;
+`}${3: extends ${4:ClassName}}${5: implements ${6:ClassName}}
+{
+
+$0
+
+}</string>
+	<key>name</key>
+	<string>Class</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>class</string>
+	<key>uuid</key>
+	<string>EE26DBDC-E92B-45C8-8B8A-8186B998C411</string>
+</dict>
+</plist>

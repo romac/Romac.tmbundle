@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/**
+ * Attach an observer
+ *
+ * @param     SplObserver    \$object    The observer to attach
+ * @return    this object
+ * @author    Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ */
+public function attach( SplObserver \$observer )
+{
+    \$this-&gt;${1:_observers}[] = \$observer;
+    
+    return \$this;
+}
+
+/**
+ * Detach an observer
+ *
+ * @param     SplObserver    \$object    The observer to detach
+ * @return    this object
+ * @author    Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ */
+public function detach( SplObserver \$observer )
+{
+    array_splice( \$this-&gt;$1, array_pop( array_keys( \$this-&gt;$1, \$observer, true ) ), 1 );
+    
+    return \$this;
+}
+    
+/**
+ * Notify all observers
+ *
+ * @return    this object
+ * @author    Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ */
+public function notify()
+{
+    foreach( \$this-&gt;$1 as \$observer ) {
+        
+        \$observer-&gt;update( \$this );
+    }
+    
+    return \$this;
+}</string>
+	<key>name</key>
+	<string>SplObserver Methods</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>observer_m</string>
+	<key>uuid</key>
+	<string>F3D6DBB2-0F48-4A81-8E17-056D9D168BD2</string>
+</dict>
+</plist>

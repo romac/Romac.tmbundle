@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>height: auto;
+overflow: hidden;</string>
+	<key>name</key>
+	<string>IE Float Container Hack</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>tabTrigger</key>
+	<string>ho</string>
+	<key>uuid</key>
+	<string>FFAEB877-A98C-4305-90EC-74E11737BD8D</string>
+</dict>
+</plist>

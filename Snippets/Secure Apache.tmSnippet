@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;IfModule mod_php5.c&gt;
+    php_admin_value open_basedir "/Library/Servers/vhosts/${1:NAME}:/tmp"
+    php_admin_value upload_tmp_dir "/Library/Servers/vhosts/$1/_sys/tmp"
+    php_admin_value session.safe_path "/Library/Servers/vhosts/$1/_sys/sessions"
+&lt;/IfModule&gt;
+&lt;IfModule mod_security2.c&gt;
+    SecUploadDir "/Library/Servers/vhosts/$1/_sys/tmp"
+&lt;/IfModule&gt;</string>
+	<key>name</key>
+	<string>Secure Apache</string>
+	<key>tabTrigger</key>
+	<string>asec</string>
+	<key>uuid</key>
+	<string>18E2FD3B-C1C0-457A-9715-62114E7F3B7E</string>
+</dict>
+</plist>

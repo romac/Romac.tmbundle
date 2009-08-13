@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?php
+
+/***************************************************************
+ * Copyright notice
+ *
+ * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * All rights reserved
+ *
+ * This script is part of the TYPO3 project. The TYPO3 project is 
+ * free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * The GNU General Public License can be found at
+ * http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This script is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
+
+/**
+ * Source file containing class $3.
+ * 
+ * @package    $1
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
+ * @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ * @version    \$Id\$
+ * @see        $3
+ */
+
+/**
+ * Class $3.
+ * 
+ * Description for class $3.
+ *
+ * @package    ${1:ExtKey}
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
+ * @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ * @version    \$Id\$
+ */
+class ${3:Tx_${1/./\u$0/}_${2:ClassName}}$0
+{
+	
+	
+	
+}
+
+/**
+ * XCLASS inclusion
+ */
+if (defined('TYPO3_MODE') &amp;&amp; \$TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/${4:${1/./\l$0/}}/Classes/${2/(_)/(?1:\/:\L$0)/g}.php']) {
+    include_once(\$TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/${4:$1}/Classes/${2/(_)/(?1:\/:\L$0)/g}.php']);
+}
+</string>
+	<key>name</key>
+	<string>TYPO3 Class (ExtBase)</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>t3class</string>
+	<key>uuid</key>
+	<string>23697AC3-0051-4EBA-925E-805F858DBE21</string>
+</dict>
+</plist>

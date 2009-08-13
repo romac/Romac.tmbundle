@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+
+if( isset( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) &amp;&amp; !empty( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) ) {
+
+	$package = $_SERVER[ 'ROMAC_CLASS_PREFIX' ];
+
+} else {
+	
+	$package = 'default';
+}
+
+print $package;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Package (CamelCaps)</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>Package</string>
+	<key>uuid</key>
+	<string>68FD1924-6B7B-485A-B8AB-7446DE2A4A3B</string>
+</dict>
+</plist>

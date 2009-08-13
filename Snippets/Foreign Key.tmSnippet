@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;foreignKey foreignTable="${1:table}"&gt;
+	&lt;reference local="${2:local}" foreign="${3:$2}" /&gt;
+&lt;/foreignKey&gt;</string>
+	<key>name</key>
+	<string>Foreign Key</string>
+	<key>scope</key>
+	<string>text.xml</string>
+	<key>tabTrigger</key>
+	<string>fk</string>
+	<key>uuid</key>
+	<string>CE3140A7-A618-4AB7-804C-444752195D4C</string>
+</dict>
+</plist>

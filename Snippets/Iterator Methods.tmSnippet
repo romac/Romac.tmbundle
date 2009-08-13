@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>public function current()
+{
+    return current( \$this-&gt;${1:_array} );
+}
+
+public function next()
+{
+    next( \$this-&gt;$1 );
+}
+
+public function key()
+{
+    return key( \$this-&gt;$1 );
+}
+
+public function valid()
+{
+    return ( current( \$this-&gt;$1 ) !== false );
+}
+
+public function rewind()
+{
+    reset( \$this-&gt;$1 );
+}
+</string>
+	<key>name</key>
+	<string>Iterator Methods</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>iterator_m</string>
+	<key>uuid</key>
+	<string>7BB1BBA4-A2B6-4F16-9272-8DBD08EA2689</string>
+</dict>
+</plist>

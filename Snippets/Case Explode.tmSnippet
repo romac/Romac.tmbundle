@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>\$parts = array();
+\$str   = '';
+
+for( \$j = 0, \$len = strlen( \$${1:methodName}) ); \$j &lt; \$len; \$j++ ) {
+    
+    \$c = \$$1{ \$j };
+    
+    if( ord( \$c ) &gt;= 65 &amp;&amp; ord( \$c ) &lt;= 90 ) {
+        
+        \$parts[] = \$str;
+        
+        \$str = \$c;
+
+    } else {
+
+        \$str .= \$c;
+    }
+}
+
+\$parts[] = \$str;</string>
+	<key>name</key>
+	<string>Case Explode</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>caseExplode</string>
+	<key>uuid</key>
+	<string>0D4BB4D1-4527-43FA-8F2D-15D01157EC6F</string>
+</dict>
+</plist>

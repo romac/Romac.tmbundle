@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+
+$path = $_SERVER[ 'TM_FILEPATH' ];
+
+if( isset( $_SERVER[ 'TM_PROJECT_DIRECTORY' ] ) ) {
+
+	$path = str_replace( $_SERVER[ 'TM_PROJECT_DIRECTORY' ], '', $path );
+	$path = str_replace( '/', '_', $path );
+	$path = substr( $path, 1 );
+
+} else {
+
+	$path = explode( '/', $path );
+	$path = array_pop( $path );
+}
+
+$path = str_replace( '.class.php', '', $path );
+$path = str_replace( 'Classes_', '', $path );
+
+if( isset( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) &amp;&amp; !empty( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) ) {
+
+	$path = $_SERVER[ 'ROMAC_CLASS_PREFIX' ] . '_' . $path;
+}
+
+print $path;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>~@P</string>
+	<key>name</key>
+	<string>Class Name (CamelCaps)</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>ClassName</string>
+	<key>uuid</key>
+	<string>5AFDA5B0-FE39-40D6-AEE7-45990C090F2E</string>
+</dict>
+</plist>

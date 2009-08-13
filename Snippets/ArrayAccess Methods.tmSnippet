@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/**
+ * Check if specified offset exists
+ *
+ * @return boolean
+ */
+public function offsetExists( \$index )
+{
+    return isset( \$this-&gt;${1:_data}[ \$index ] );
+}
+
+/**
+ * Get value at specified offset
+ *
+ * @return mixed
+ */
+public function offsetGet( \$index )
+{
+    return \$this-&gt;$1[ \$index ];
+}
+
+/**
+ * Set value at specified offset
+ *
+ * @return void
+ */
+public function offsetSet( \$index, \$value )
+{
+    \$this-&gt;$1[ \$index ] = \$value;
+}
+
+/**
+ * Unset specified offset
+ *
+ * @return void
+ */
+public function offsetUnset( \$index )
+{
+    unset( \$this-&gt;$1[ \$index ] );
+}</string>
+	<key>name</key>
+	<string>ArrayAccess Methods</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>arrayaccess_m</string>
+	<key>uuid</key>
+	<string>970361E7-5DCE-4756-892E-F700A65681B7</string>
+</dict>
+</plist>

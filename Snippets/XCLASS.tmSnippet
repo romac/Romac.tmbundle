@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/**
+ * XCLASS inclusion
+ */
+if (defined('TYPO3_MODE') &amp;&amp; \$TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['$1']) {
+    include_once(\$TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['$1']);
+}</string>
+	<key>name</key>
+	<string>XCLASS</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>xclass</string>
+	<key>uuid</key>
+	<string>E5ED0116-4CF3-41F9-BD0A-7FBF9E0B948E</string>
+</dict>
+</plist>

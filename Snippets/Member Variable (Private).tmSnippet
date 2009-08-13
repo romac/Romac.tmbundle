@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/**
+ * ${3:undocumented class variable}
+ *
+ * @var ${4:string}
+ */
+private \$_${1:varName} = ${2:''};$0</string>
+	<key>name</key>
+	<string>Member Variable (Private)</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>var-</string>
+	<key>uuid</key>
+	<string>2265C3DB-B674-48D1-9CF2-70BD65D1C48D</string>
+</dict>
+</plist>

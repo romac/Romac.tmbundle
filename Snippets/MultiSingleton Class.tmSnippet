@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?php
+
+/**
+ * Class $1 (Multi-Singleton).
+ *
+ * A reference to the $1 instance can be get with $1::getInstance().
+ *
+ * @package    Package
+ * @subpackage SubPackage
+ * @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ * @copyright  Copyright (c) 2008, Romain Ruetschi. All Rights Reserved.
+ * @version    \$Id\$
+ */
+final class ${1:ClassName}
+{
+    
+    /**
+     * A reference to the default instance (the first one created).
+     *
+     * @var $1 object.
+     */
+    private static \$_defaultInstance  = NULL;
+    
+    /**
+     * An hash array of references to the $1 instances by names.
+     *
+     * @var array, $1 objects.
+     */
+    private static \$_instances        = array();
+    
+    /**
+     * The number of instances currently created.
+     *
+     * @var int
+     */
+    private static \$_nbInstances      = 0;
+    
+    
+    /**
+     * This instance identifier.
+     *
+     * @var string
+     */
+    protected \$_instanceIdentifier    = '';
+    
+    /**
+     * Class constructor (Multi-Singleton).
+     * It cannot be used to instanciate a $1 object - see {@link getInstance}.
+     * Creates an instance of the $1 class.
+     *
+     * @param string \$instanceIdentifier The instance identifier.
+     * @see   getInstance to know how to create a $1 instance
+     *                    or to get a reference to one $1 instance.
+     */
+    private function __construct( \$instanceIdentifier )
+    {
+        \$this-&gt;_instanceIdentifier = \$instanceIdentifier;
+    }
+    
+    /**
+     * Creates or returns an specific instance of this class.
+     * If the $1 instance named $instance already exists,
+     * it is returned as a reference,
+     * otherwise, the method tries to create a new instance.
+     *
+     * @param  string \$instanceIdentifier the name of the instance to get or create.
+     * @return $1 object        a reference to the $1 instance named $instance.
+     * @see    __construct      for more informations.
+     */
+    public static function getInstance( \$instanceIdentifier )
+    {
+        if( empty( \$instanceIdentifier ) ) {
+            
+            throw new Exception(
+                ' [' . __METHOD__ . ' ] : The first parameter cannot be empty!'
+            );
+        }
+        
+        if( !isset( self::\$_instances[ \$instanceIdentifier ] ) ) {
+            
+            self::\$_instances[ \$instanceIdentifier ] = new self( \$instanceIdentifier );
+            
+            self::\$_nbInstances++;
+        }
+        
+        return self::\$_instances[ \$instanceIdentifier ];
+    }
+    
+    /**
+     * Create a clone of the instance.
+     * Because this class is a singleton class, there can exists only one
+     * insstance of this class.
+     * So this method will throw an exception if someone tries to call it.
+     *
+     * @throws BadMethodCallException An new BadMethodCallException instance
+     * @return void
+     */
+    public function __clone()
+    {
+        throw new BadMethodCallException(
+            'This class is a singleton class, you are not allowed to clone it.' . "\n" .
+            'Please call ' . __CLASS__ . '::getInstance() to get a reference to ' .
+            'the only instance of the ' . __CLASS__ . ' class.'
+        );
+    }
+    
+}
+</string>
+	<key>name</key>
+	<string>MultiSingleton Class</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>multi_c</string>
+	<key>uuid</key>
+	<string>DE99A416-57E8-4771-AAE8-CFF2B18B484B</string>
+</dict>
+</plist>
