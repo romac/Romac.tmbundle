@@ -151,11 +151,11 @@ class Romac_Environment
         
         if( !empty( $this->_variables[ 'ROMAC_PREFIX' ] ) ) {
             
-            $className = $_variables[ 'ROMAC_PREFIX' ] . $classSeparator . $className;
+            $className = $this->_variables[ 'ROMAC_PREFIX' ] . $classSeparator . $className;
             
         } else if( !empty( $this->_variables[ 'ROMAC_CLASS_PREFIX' ] ) ) {
             
-            $className = $_variables[ 'ROMAC_CLASS_PREFIX' ] . $classSeparator . $className;
+            $className = $this->_variables[ 'ROMAC_CLASS_PREFIX' ] . $classSeparator . $className;
         }
         
         return $className;
