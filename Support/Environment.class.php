@@ -163,7 +163,7 @@ class Romac_Environment
     
     public function getPackageName( $default = self::DEFAULT_PACKAGE )
     {
-        if( !empty( $_variables[ 'ROMAC_PREFIX' ] ) ) {
+        if( !empty( $this->_variables[ 'ROMAC_PREFIX' ] ) ) {
             
             $package = $this->_variables[ 'ROMAC_PREFIX' ];
             
