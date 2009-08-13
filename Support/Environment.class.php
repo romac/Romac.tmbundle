@@ -151,11 +151,11 @@ class Romac_Environment
         
         if( !empty( $this->_variables[ 'ROMAC_PREFIX' ] ) ) {
             
-            $classSeparator = $_variables[ 'ROMAC_CLASS_PREFIX' ] . $classSeparator . $className;
+            $className = $_variables[ 'ROMAC_PREFIX' ] . $classSeparator . $className;
             
         } else if( !empty( $this->_variables[ 'ROMAC_CLASS_PREFIX' ] ) ) {
             
-            $classSeparator = $_variables[ 'ROMAC_CLASS_PREFIX' ] . $classSeparator . $className;
+            $className = $_variables[ 'ROMAC_CLASS_PREFIX' ] . $classSeparator . $className;
         }
         
         return $className;
@@ -163,7 +163,7 @@ class Romac_Environment
     
     public function getPackageName( $default = self::DEFAULT_PACKAGE )
     {
-        if( !empty( $_SERVER[ 'ROMAC_PREFIX' ] ) ) {
+        if( !empty( $_variables[ 'ROMAC_PREFIX' ] ) ) {
             
             $package = $this->_variables[ 'ROMAC_PREFIX' ];
             
