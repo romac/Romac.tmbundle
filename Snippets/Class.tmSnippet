@@ -26,49 +26,25 @@
 * 
 * Description for class $1.
 *
-* @package    ${7:`#!/opt/local/bin/php
+* @package    ${7:`#!/usr/bin/env php
 &lt;?php
 
-if( isset( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) &amp;&amp; !empty( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) ) {
+require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Environment.class.php' );
 
-$package = $_SERVER[ 'ROMAC_CLASS_PREFIX' ];
+print Romac_Environment::getInstance()-&gt;getPackageName();
 
-} else {
-
-$package = 'default';
-}
-
-print $package;`}
+`}
 * @license    http://romac.github.com/files/BSD.txt New BSD License
 * @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
 * @version    ${ROMAC_VERSION:0.1}
 */
-${2:abstract }class ${1:`#!/opt/local/bin/php
+${2:abstract }class ${1:`#!/usr/bin/env php
 &lt;?php
 
-$path = $_SERVER[ 'TM_FILEPATH' ];
+require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Environment.class.php' );
 
-if( isset( $_SERVER[ 'TM_PROJECT_DIRECTORY' ] ) ) {
+print Romac_Environment::getInstance()-&gt;getClassName();
 
-$path = str_replace( $_SERVER[ 'TM_PROJECT_DIRECTORY' ], '', $path );
-$path = str_replace( '/', '_', $path );
-$path = substr( $path, 1 );
-
-} else {
-
-$path = explode( '/', $path );
-$path = array_pop( $path );
-}
-
-$path = str_replace( '.class.php', '', $path );
-$path = str_replace( 'Classes_', '', $path );
-
-if( isset( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) &amp;&amp; !empty( $_SERVER[ 'ROMAC_CLASS_PREFIX' ] ) ) {
-
-$path = $_SERVER[ 'ROMAC_CLASS_PREFIX' ] . '_' . $path;
-}
-
-print $path;
 `}${3: extends ${4:ClassName}}${5: implements ${6:ClassName}}
 {
 
