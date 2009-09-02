@@ -6,27 +6,27 @@
 	<string>&lt;?php
 
 /*
-* Copyright (c) 2009, Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
-* Code licensed under the BSD License:
-* See http://romac.github.com/files/BSD.txt
-*/
+ * Copyright (c) 2009, Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ * Code licensed under the BSD License:
+ * See http://romac.github.com/files/BSD.txt
+ */
 
 /**
-* Source file containing class $1.
-* 
-* @package    $7
-* @license    http://romac.github.com/files/BSD.txt New BSD License
-* @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
-* @version    ${ROMAC_VERSION:0.1}
-* @see        $1
-*/
+ * Source file containing class $1.
+ * 
+ * @package    $7
+ * @license    http://romac.github.com/files/BSD.txt New BSD License
+ * @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ * @version    ${ROMAC_VERSION:0.1}
+ * @see        $1
+ */
 
 /**
-* Class $1.
-* 
-* Description for class $1.
-*
-* @package    ${7:`#!/usr/bin/env php
+ * Class $1.
+ * 
+ * Description for class $1.
+ *
+ * @package    ${7:`#!/usr/bin/env php
 &lt;?php
 
 require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Environment.class.php' );
@@ -34,10 +34,10 @@ require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Environment.class.php' );
 print Romac_Environment::getInstance()-&gt;getPackageName();
 
 `}
-* @license    http://romac.github.com/files/BSD.txt New BSD License
-* @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
-* @version    ${ROMAC_VERSION:0.1}
-*/
+ * @license    http://romac.github.com/files/BSD.txt New BSD License
+ * @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
+ * @version    ${ROMAC_VERSION:0.1}
+ */
 ${2:abstract }class ${1:`#!/usr/bin/env php
 &lt;?php
 
