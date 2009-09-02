@@ -29,9 +29,9 @@
  * @package    ${7:`#!/usr/bin/env php
 &lt;?php
 
-require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Environment.class.php' );
+require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Romac.class.php' );
 
-print Romac_Environment::getInstance()-&gt;getPackageName();
+print Romac::getInstance()-&gt;getPackageName();
 
 `}
  * @license    http://romac.github.com/files/BSD.txt New BSD License
@@ -41,9 +41,9 @@ print Romac_Environment::getInstance()-&gt;getPackageName();
 ${2:abstract }class ${1:`#!/usr/bin/env php
 &lt;?php
 
-require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Environment.class.php' );
+require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Romac.class.php' );
 
-print Romac_Environment::getInstance()-&gt;getClassName();
+print Romac::getInstance()-&gt;getClassName();
 
 `}${3: extends ${4:ClassName}}${5: implements ${6:ClassName}}
 {
