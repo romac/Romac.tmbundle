@@ -47,6 +47,37 @@ final class Romac
     protected $_variables     = array();
     
     /**
+     * Prefix keys
+     *
+     * @var array
+     */
+    protected $_prefixKeys = array(
+        'RR_PREFIX',
+        'ROMAC_PREFIX',
+        'ROMAC_CLASS_PREFIX'
+    );
+    
+    /**
+     * Suffix
+     *
+     * @var string
+     */
+    protected $_classSuffixes = array(
+        '.class.php',
+        '.php'
+    );
+    
+    /**
+     * Directories to skip from filename.
+     *
+     * @var array
+     */
+    protected $_skipDirectories = array(
+        'Classes',
+        'Tests'
+    );
+    
+    /**
      * Class constructor.
      * The constructor of this class cannot be used to instanciate a Romac object.
      * This class is a singleton class, this means that there is only one instance
@@ -61,14 +92,17 @@ final class Romac
             
             $this->_variables =& $_SERVER;
             
-            return;
-        }
-        
-        if( array_key_exists( 'TM_FILENAME', $_ENV ) ) {
+        } else if( array_key_exists( 'TM_FILENAME', $_ENV ) ) {
             
             $this->_variables =& $_ENV;
+        }
+        
+        if( array_key_exists( 'RR_CLASS_FOLDERS', $this->_variables ) ) {
             
-            return;
+            $this->_skipDirectories += $this->trimExplode(
+                ',',
+                $this->_variables[ 'RR_CLASS_FOLDERS' ]
+            );
         }
     }
     
@@ -153,8 +187,15 @@ final class Romac
             $className = array_pop( $className );
         }
         
-        $className = str_replace( '.class.php', '', $className );
-        $className = str_replace( 'Classes' . $classSeparator, '', $className );
+        foreach( $this->_classSuffixes as $suffix ) {
+            
+            $className = str_replace( $suffix, '', $className );
+        }
+        
+        foreach( $this->_skipDirectories as $skipDirectory ) {
+            
+            $className = str_replace( $skipDirectory . $classSeparator, '', $className );
+        }
         
         $prefix    = $this->getPrefix();
         $prefix    = ( $prefix ) ? $prefix . $classSeparator : '';
@@ -169,13 +210,7 @@ final class Romac
     
     public function getPrefix( $default = '' )
     {
-        static $keys = array(
-            'RR_PREFIX',
-            'ROMAC_PREFIX',
-            'ROMAC_CLASS_PREFIX'
-        );
-        
-        foreach( $keys as $key ) {
+        foreach( $this->_prefixKeys as $key ) {
             
             if( !empty( $this->_variables[ $key ] ) ) {
                 
@@ -184,6 +219,51 @@ final class Romac
         }
         
         return $default;
+    }
+    
+    /**
+     * Explodes a string and trims all values for whitespace in the ends.
+     * If $onlyNonEmptyValues is set, then all blank ('') values are removed.
+     *
+     * @param string  $delimiter         Delimiter string to explode with.
+     * @param string  $string            The string to explode.
+     * @param boolean $removeEmptyValues If set, all empty values will be removed in output.
+     * @param integer $limit             If positive, the result will contain a maximum of
+     *                                   $limit elements, if negative, all components except
+     *                                   the last -$limit are returned, if zero (default),
+     *                                   the result is not limited at all. Attention though
+     *                                   that the use of this parameter can slow down this
+     *                                   function.
+     * @return  array Exploded values.
+     * @license GPL v2
+     * @package TYPO3 (www.typo3.org)
+     */
+    public function trimExplode( $delimiter, $string, $removeEmptyValues = true, $limit = 0 )
+    {
+        $explodedValues = explode( $delimiter, $string );
+        $explodedValues = array_map( 'trim', $explodedValues );
+        
+        if( $removeEmptyValues ) {
+            
+            $temp = array();
+            
+            foreach( $explodedValues as $value ) {
+                
+                if( $value !== '' ) {
+                    
+                    $temp[] = $value;
+                }
+            }
+            
+            $explodedValues = $temp;
+        }
+        
+        if( $limit !== 0 ) {
+            
+            $explodedValues = array_slice( $explodedValues, 0, $limit );
+        }
+        
+        return $explodedValues;
     }
     
 }

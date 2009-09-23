@@ -26,13 +26,16 @@
 			<string>C903B983-1E03-406E-9687-4730871585B6</string>
 			<string>5D994E5A-E557-4F25-96E1-1541AACF15CA</string>
 			<string>0DE63FA6-8B23-431D-B47D-D44B5188AE8B</string>
+			<string>4AD8CA3E-0FF9-41C3-934D-FF0854111C6B</string>
 		</array>
 		<key>submenus</key>
 		<dict>
 			<key>0DE63FA6-8B23-431D-B47D-D44B5188AE8B</key>
 			<dict>
 				<key>items</key>
-				<array/>
+				<array>
+					<string>0A2A763A-A464-4A77-9F57-A8C3D88C8502</string>
+				</array>
 				<key>name</key>
 				<string>FLOW3</string>
 			</dict>
@@ -40,6 +43,7 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>8C96E0F4-1D05-45CA-8600-BF8B88809405</string>
 					<string>E24EFCC6-EBBB-4E36-B9C1-982024C2827A</string>
 					<string>EE26DBDC-E92B-45C8-8B8A-8186B998C411</string>
 					<string>3E09BB5C-DCD1-48AF-BE9D-A55606F9FE3C</string>
@@ -73,7 +77,6 @@
 			<dict>
 				<key>items</key>
 				<array>
-					<string>0A2A763A-A464-4A77-9F57-A8C3D88C8502</string>
 					<string>51AB46C7-2B19-4850-9137-9C76D7C80F47</string>
 					<string>23697AC3-0051-4EBA-925E-805F858DBE21</string>
 					<string>E5ED0116-4CF3-41F9-BD0A-7FBF9E0B948E</string>
@@ -115,6 +118,8 @@
 					<string>3AB3E233-0263-4656-B9D6-E5A3F5FBD3BA</string>
 					<string>32FB6E53-127E-4203-830F-EFB304D4D1CA</string>
 					<string>A6EEFC12-A249-45FD-9AA9-489390C39CCA</string>
+					<string>F0AC1590-8024-4A8D-ADE9-148B65937D59</string>
+					<string>A6F77AFA-E0D1-4E33-B45C-D5AC53F27BD0</string>
 					<string>ACEC5726-6167-4B2F-B42E-C56C42B09EF3</string>
 					<string>2D5F3A20-3EDC-41D9-A22B-359A2924EFEC</string>
 				</array>

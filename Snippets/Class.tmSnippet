@@ -5,6 +5,8 @@
 	<key>content</key>
 	<string>&lt;?php
 
+declare( ENCODING = 'utf-8' );
+
 /*
  * Copyright (c) 2009, Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
  * Code licensed under the BSD License:
