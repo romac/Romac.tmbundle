@@ -11,6 +11,8 @@
 require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Romac.class.php' );
 
 print Romac::getInstance()-&gt;getPackageName();</string>
+		<key>name</key>
+		<string>Package</string>
 	</dict>
 	<key>deleted</key>
 	<array/>

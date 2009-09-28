@@ -14,6 +14,16 @@ declare( ENCODING = 'UTF-8' );
  * See http://romac.github.com/files/BSD.txt
  */
 
+// Namespace declaration.
+namespace ${8:`#!/usr/bin/env php
+&lt;?php
+
+require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Romac.class.php' );
+
+print Romac::getInstance()-&gt;getNamespace();
+
+`};
+
 /**
  * Source file containing class $1.
  * 
@@ -46,7 +56,7 @@ ${2:abstract }class ${1:`#!/usr/bin/env php
 
 require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Romac.class.php' );
 
-print Romac::getInstance()-&gt;getClassName();
+print Romac::getInstance()-&gt;getNamespacedClassName();
 
 `}${3: extends ${4:ClassName}}${5: implements ${6:ClassName}}
 {
@@ -55,12 +65,12 @@ $0
 
 }</string>
 	<key>name</key>
-	<string>Class</string>
+	<string>Namespaced class</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>class</string>
+	<string>nclass</string>
 	<key>uuid</key>
-	<string>EE26DBDC-E92B-45C8-8B8A-8186B998C411</string>
+	<string>C943AA8E-573F-4F1E-9518-85208971C9A1</string>
 </dict>
 </plist>

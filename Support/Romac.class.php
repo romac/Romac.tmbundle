@@ -29,8 +29,10 @@
 final class Romac
 {
     
-    const DEFAULT_CLASS_SEPARATOR = '_';
-    const DEFAULT_PACKAGE         = 'default';
+    const DS                        = DIRECTORY_SEPARATOR;
+    const DEFAULT_CLASS_SEPARATOR   = '_';
+    const NAMESPACE_CLASS_SEPARATOR = '\\';
+    const DEFAULT_PACKAGE           = 'default';
     
     /**
      * A reference to this class instance.
@@ -159,16 +161,9 @@ final class Romac
         );
     }
     
-    public function getClassName( $classSeparator = self::DEFAULT_CLASS_SEPARATOR )
+    public function getClassName( $classSeparator = self::DEFAULT_CLASS_SEPARATOR, $prefix = true )
     {
-        static $__cache = array();
-        
-        $path           = $this->_variables[ 'TM_FILEPATH' ];
-        
-        if( array_key_exists( $path, $__cache ) ) {
-            
-            return $__cache[ $path ];
-        }
+        $path = $this->_variables[ 'TM_FILEPATH' ];
         
         if( !empty( $this->_variables[ 'TM_PROJECT_DIRECTORY' ] ) ) {
             
@@ -178,12 +173,12 @@ final class Romac
                 $path
             );
             
-            $className = str_replace( '/', $classSeparator, $className );
+            $className = str_replace( self::DS, $classSeparator, $className );
             $className = substr( $className, 1 );
         
         } else {
             
-            $className = explode( '/', $path );
+            $className = explode( self::DS, $path );
             $className = array_pop( $className );
         }
         
@@ -197,15 +192,49 @@ final class Romac
             $className = str_replace( $skipDirectory . $classSeparator, '', $className );
         }
         
-        $prefix    = $this->getPrefix();
-        $prefix    = ( $prefix ) ? $prefix . $classSeparator : '';
+        $prefix        = ( $prefix ) ? $this->getPrefix() . $classSeparator : '';
         
-        return $__cache[ $path ] = $prefix . $className;
+        return $prefix . $className;
     }
     
-    public function getPackageName( $default = self::DEFAULT_PACKAGE )
+    public function getPackageName()
     {
-        return $this->getPrefix( $default );
+        if( isset( $this->_variables[ 'RR_PACKAGE' ] ) ) {
+            
+            return $this->_variables[ 'RR_PACKAGE' ];
+        }
+        
+        return $this->getPrefix();
+    }
+    
+    public function getNamespacedClassName()
+    {
+        $fullClassName      = $this->getClassName(
+            self::NAMESPACE_CLASS_SEPARATOR
+        );
+        
+        $fullClassNameParts = explode(
+            self::NAMESPACE_CLASS_SEPARATOR,
+            $fullClassName
+        );
+        
+        return array_pop( $fullClassNameParts );
+    }
+    
+    public function getNamespace()
+    {
+        $fullClassName      = $this->getClassName(
+            self::NAMESPACE_CLASS_SEPARATOR
+        );
+        
+        $fullClassNameParts = explode(
+            self::NAMESPACE_CLASS_SEPARATOR,
+            $fullClassName
+        );
+        
+        array_pop( $fullClassNameParts );
+        
+        return implode( self::NAMESPACE_CLASS_SEPARATOR, $fullClassNameParts );
     }
     
     public function getPrefix( $default = '' )

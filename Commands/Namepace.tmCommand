@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+
+require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Romac.class.php' );
+
+print '\\' . Romac::getInstance()-&gt;getNamespace();</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>~@N</string>
+	<key>name</key>
+	<string>Namepace</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>ClassName</string>
+	<key>uuid</key>
+	<string>33A5D95A-2EA5-4AA5-B0F5-1882BDCA9FE1</string>
+</dict>
+</plist>

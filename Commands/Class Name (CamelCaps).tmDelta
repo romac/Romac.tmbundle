@@ -11,6 +11,8 @@
 require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Romac.class.php' );
 
 print Romac::getInstance()-&gt;getClassName();</string>
+		<key>name</key>
+		<string>Class Name</string>
 	</dict>
 	<key>deleted</key>
 	<array/>
