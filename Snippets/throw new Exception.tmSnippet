@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>throw new ${1:Exception}(
+	'${2:Message.}'
+);</string>
+	<key>name</key>
+	<string>throw new Exception</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>te</string>
+	<key>uuid</key>
+	<string>2BA79D6B-0C0D-46AE-8C00-F811999BACC0</string>
+</dict>
+</plist>

@@ -192,7 +192,10 @@ final class Romac
             $className = str_replace( $skipDirectory . $classSeparator, '', $className );
         }
         
-        $prefix        = ( $prefix ) ? $this->getPrefix() . $classSeparator : '';
+        $prefix = ( $prefix ) ? $this->getPrefix() : '';
+        $prefix = ( $prefix && empty( $this->_variables[ 'RR_AVOID_2PREFIX' ] ) )
+                ? $prefix . $classSeparator
+                : '';
         
         return $prefix . $className;
     }
@@ -233,6 +236,11 @@ final class Romac
         );
         
         array_pop( $fullClassNameParts );
+        
+        if( !empty( $this->_variables[ 'RR_AVOID_2PREFIX' ] ) ) {
+            
+            array_shift( $fullClassNameParts );
+        }
         
         return implode( self::NAMESPACE_CLASS_SEPARATOR, $fullClassNameParts );
     }

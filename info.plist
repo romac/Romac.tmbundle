@@ -132,6 +132,10 @@
 				<array>
 					<string>5AFDA5B0-FE39-40D6-AEE7-45990C090F2E</string>
 					<string>68FD1924-6B7B-485A-B8AB-7446DE2A4A3B</string>
+					<string>33A5D95A-2EA5-4AA5-B0F5-1882BDCA9FE1</string>
+					<string>C943AA8E-573F-4F1E-9518-85208971C9A1</string>
+					<string>2BA79D6B-0C0D-46AE-8C00-F811999BACC0</string>
+					<string>4D71E156-F8C0-4669-ADAD-0ABA69B6EF03</string>
 				</array>
 				<key>name</key>
 				<string>Project</string>
@@ -226,6 +230,8 @@
 		<string>F0AC1590-8024-4A8D-ADE9-148B65937D59</string>
 		<string>4AD8CA3E-0FF9-41C3-934D-FF0854111C6B</string>
 		<string>8C96E0F4-1D05-45CA-8600-BF8B88809405</string>
+		<string>2BA79D6B-0C0D-46AE-8C00-F811999BACC0</string>
+		<string>4D71E156-F8C0-4669-ADAD-0ABA69B6EF03</string>
 	</array>
 	<key>uuid</key>
 	<string>53E3FA44-45B2-4895-B351-FDBDCCE6F13D</string>
