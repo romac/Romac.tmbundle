@@ -11,14 +11,14 @@ declare( ENCODING = 'UTF-8' );
 /*
  * Copyright (c) 2009, Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
  * Code licensed under the BSD License:
- * See http://romac.github.com/files/BSD.txt
+ * See http://opensource.org/licenses/bsd-license.php
  */
 
 /**
  * Source file containing class $1.
  * 
  * @package    $7
- * @license    http://romac.github.com/files/BSD.txt New BSD License
+ * @license    http://opensource.org/licenses/bsd-license.php New BSD License
  * @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
  * @version    ${RR_VERSION:0.1}
  * @see        $1
@@ -37,7 +37,7 @@ require_once( $_SERVER[ 'TM_BUNDLE_SUPPORT' ] . '/Romac.class.php' );
 print Romac::getInstance()-&gt;getPackageName();
 
 `}
- * @license    http://romac.github.com/files/BSD.txt New BSD License
+ * @license    http://opensource.org/licenses/bsd-license.php New BSD License
  * @author     Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
  * @version    ${RR_VERSION:0.1}
  */

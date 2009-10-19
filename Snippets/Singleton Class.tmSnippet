@@ -104,11 +104,11 @@ throw new BadMethodCallException(
 );
 }</string>
 	<key>name</key>
-	<string>Singleton Class</string>
+	<string>Singleton Methods</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>single_c</string>
+	<string>single_m</string>
 	<key>uuid</key>
 	<string>ADB0FAF2-2272-4133-AE50-14CD83A07BF2</string>
 </dict>
