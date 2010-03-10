@@ -5,9 +5,6 @@
 	<key>content</key>
 	<string>&lt;?php
 
-// Encoding declaration.
-declare( ENCODING = 'UTF-8' );
-
 /*
  * Copyright (c) 2009, Romain Ruetschi &lt;romain.ruetschi@gmail.com&gt;
  * Code licensed under the BSD License:
@@ -27,7 +24,7 @@ declare( ENCODING = 'UTF-8' );
 /**
  * Class $1.
  * 
- * Description for class $1.
+ * @todo       Description for class $1.
  *
  * @package    ${7:`#!/usr/bin/env php
 &lt;?php

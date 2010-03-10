@@ -5,12 +5,12 @@
 	<key>content</key>
 	<string>public function get${1/./\u$0/}()
 {
-    return \$this-&gt;${2:_}${1:name};
+    return \$this-&gt;_${1:name};
 }
- 
+
 public function set${1/./\u$0/}( \$$1 )
 {
-    \$this-&gt;$2$1 = \$$1;
+    \$this-&gt;_$1 = \$$1;
      
     return \$this;
 }</string>

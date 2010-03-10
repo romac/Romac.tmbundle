@@ -37,7 +37,7 @@ print Romac::getInstance()-&gt;getNamespace();
 /**
  * Class $1.
  * 
- * @todo Description for class $1.
+ * @todo       Description for class $1.
  *
  * @package    ${7:`#!/usr/bin/env php
 &lt;?php
