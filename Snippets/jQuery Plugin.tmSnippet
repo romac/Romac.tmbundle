@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>// &lt;![CDATA[
+
+( function( \$ )
+{
+    
+    \$.fn.$1 = function( options )
+    {
+        
+        var defaults = {
+            $2
+        };
+        
+        var options = \$.extend( defaults, options );
+        
+        this.each( function()
+        {
+            var \$this = \$( this );
+            
+            $3
+            
+        } );
+        
+        return this;
+    }
+    
+} )( jQuery );
+
+// ]]&gt;</string>
+	<key>name</key>
+	<string>jQuery Plugin</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>tabTrigger</key>
+	<string>jqp</string>
+	<key>uuid</key>
+	<string>F1B9228C-EA05-479C-8E64-12891C249DBF</string>
+</dict>
+</plist>

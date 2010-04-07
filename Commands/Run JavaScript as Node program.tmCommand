@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+
+print '&lt;pre&gt;';
+
+$fileName = $_SERVER[ 'TM_FILEPATH' ];
+
+if( !$fileName ) {
+	
+    $fileName = tempnam( sys_get_temp_dir(), 'TM_NODE' );
+    
+    file_put_contents( $fileName, $_SERVER[ 'TM_SELECTED_TEXT' ] );
+}
+
+system( $_SERVER[ 'TM_NODE' ] . ' ' . $fileName );
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>@R</string>
+	<key>name</key>
+	<string>Run JavaScript as Node program</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>63B2FABD-DD61-4CE7-97EB-E0E22F41EF2E</string>
+</dict>
+</plist>
