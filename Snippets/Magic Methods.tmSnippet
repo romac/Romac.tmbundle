@@ -5,10 +5,9 @@
 	<key>content</key>
 	<string>public function __get( \$name )
 {
-    if( \$this-&gt;__isset( \$name ) ) {
-        
+    if( \$this-&gt;__isset( \$name ) )
+    {
         return \$this-&gt;${1:_data}[ \$name ];
-    
     }
     
     return ${2:NULL};

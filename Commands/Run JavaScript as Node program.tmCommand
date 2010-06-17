@@ -12,9 +12,9 @@ print '&lt;pre&gt;';
 
 $fileName = $_SERVER[ 'TM_FILEPATH' ];
 
-if( !$fileName ) {
-	
-    $fileName = tempnam( sys_get_temp_dir(), 'TM_NODE' );
+if( !$fileName )
+{
+	$fileName = tempnam( sys_get_temp_dir(), 'TM_NODE' );
     
     file_put_contents( $fileName, $_SERVER[ 'TM_SELECTED_TEXT' ] );
 }
@@ -26,7 +26,7 @@ system( $_SERVER[ 'TM_NODE' ] . ' ' . $fileName );
 	<key>keyEquivalent</key>
 	<string>@R</string>
 	<key>name</key>
-	<string>Run JavaScript as Node program</string>
+	<string>Run JavaScript through Node.JS</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>

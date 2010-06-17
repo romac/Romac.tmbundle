@@ -74,15 +74,15 @@ final class ${1:ClassName}
      */
     public static function getInstance( \$instanceIdentifier )
     {
-        if( empty( \$instanceIdentifier ) ) {
-            
+        if( empty( \$instanceIdentifier ) )
+        {
             throw new Exception(
                 ' [' . __METHOD__ . ' ] : The first parameter cannot be empty!'
             );
         }
         
-        if( !isset( self::\$_instances[ \$instanceIdentifier ] ) ) {
-            
+        if( !isset( self::\$_instances[ \$instanceIdentifier ] ) )
+        {
             self::\$_instances[ \$instanceIdentifier ] = new self( \$instanceIdentifier );
             
             self::\$_nbInstances++;

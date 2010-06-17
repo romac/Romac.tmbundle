@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!--[if IE]&gt;
+    &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt; </string>
+	<key>name</key>
+	<string>IE HTML5 Conditional Include</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>iehtml5</string>
+	<key>uuid</key>
+	<string>6BEE6F5B-76A3-469B-943C-D3D1B3A6E470</string>
+</dict>
+</plist>

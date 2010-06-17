@@ -58,8 +58,8 @@ private function __construct()
  */
 public static function getInstance()
 {
-    if( !is_object( self::\$_instance ) ) {
-    
+    if( !is_object( self::\$_instance ) )
+    {
         self::\$_instance = new self();
     }
     

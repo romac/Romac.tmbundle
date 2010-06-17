@@ -6,18 +6,19 @@
 	<string>\$parts = array();
 \$str   = '';
 
-for( \$j = 0, \$len = strlen( \$${1:methodName}) ); \$j &lt; \$len; \$j++ ) {
-    
+for( \$j = 0, \$len = strlen( \$${1:methodName}) ); \$j &lt; \$len; \$j++ )
+{
     \$c = \$$1{ \$j };
     
-    if( ord( \$c ) &gt;= 65 &amp;&amp; ord( \$c ) &lt;= 90 ) {
-        
+    if( ord( \$c ) &gt;= 65 &amp;&amp; ord( \$c ) &lt;= 90 )
+    {
         \$parts[] = \$str;
         
         \$str = \$c;
 
-    } else {
-
+    }
+    else
+    {
         \$str .= \$c;
     }
 }
