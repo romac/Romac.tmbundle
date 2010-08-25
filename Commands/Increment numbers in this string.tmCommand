@@ -19,7 +19,7 @@ print preg_replace_callback(
     $text
 );</string>
 	<key>fallbackInput</key>
-	<string>line</string>
+	<string>none</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>

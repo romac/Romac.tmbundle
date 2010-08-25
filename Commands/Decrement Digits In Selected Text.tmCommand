@@ -11,10 +11,10 @@
 $text = $_ENV[ 'TM_SELECTED_TEXT' ];
 
 print preg_replace_callback(
-    '/(\d+)/',
+    '/(\d)/',
     function( $matches )
     {
-        return $matches[ 0 ] + 1;
+        return $matches[ 0 ] - 1;
     },
     $text
 );</string>
@@ -25,10 +25,10 @@ print preg_replace_callback(
 	<key>keyEquivalent</key>
 	<string>^i</string>
 	<key>name</key>
-	<string>Increment Numbers In Selected Text</string>
+	<string>Decrement Digits In Selected Text</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>uuid</key>
-	<string>E8C4405C-E789-4041-8BBA-B580136E13B5</string>
+	<string>89B48575-6FD3-40A5-BC72-C112F0302116</string>
 </dict>
 </plist>

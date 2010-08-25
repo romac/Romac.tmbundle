@@ -119,6 +119,9 @@
 				<array>
 					<string>FD21E119-6D5E-4CC1-8862-C290A32D4666</string>
 					<string>E8C4405C-E789-4041-8BBA-B580136E13B5</string>
+					<string>------------------------------------</string>
+					<string>89B48575-6FD3-40A5-BC72-C112F0302116</string>
+					<string>E40D4B85-82A5-42BF-B2D6-AAA0608857A5</string>
 				</array>
 				<key>name</key>
 				<string>Text</string>
@@ -155,6 +158,7 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>3D0DE2F3-6B08-4565-8036-14FA3FD64DA7</string>
 					<string>E89968AD-C4DE-467B-9D84-94A9826F3920</string>
 					<string>AA04F65F-8C2A-4DC3-9768-02C0E1C7F16C</string>
 					<string>6F6DA646-3912-452D-94E2-77FF79C93771</string>
@@ -189,6 +193,9 @@
 		<string>63B2FABD-DD61-4CE7-97EB-E0E22F41EF2E</string>
 		<string>FD21E119-6D5E-4CC1-8862-C290A32D4666</string>
 		<string>E8C4405C-E789-4041-8BBA-B580136E13B5</string>
+		<string>89B48575-6FD3-40A5-BC72-C112F0302116</string>
+		<string>E40D4B85-82A5-42BF-B2D6-AAA0608857A5</string>
+		<string>3D0DE2F3-6B08-4565-8036-14FA3FD64DA7</string>
 		<string>83A9C142-6D65-4632-AAFE-12B446008DF9</string>
 		<string>D9862CBE-EA66-44DA-9F3D-B577DA572751</string>
 		<string>4D7BCBF7-F647-457C-819E-8ABA5DDA0565</string>

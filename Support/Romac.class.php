@@ -90,17 +90,18 @@ final class Romac
      */
     private function __construct()
     {
-        if( array_key_exists( 'TM_FILENAME', $_SERVER ) ) {
-            
+        if( array_key_exists( 'TM_FILENAME', $_SERVER ) )
+        {
             $this->_variables =& $_SERVER;
             
-        } else if( array_key_exists( 'TM_FILENAME', $_ENV ) ) {
-            
+        }
+        else if( array_key_exists( 'TM_FILENAME', $_ENV ) )
+        {
             $this->_variables =& $_ENV;
         }
         
-        if( array_key_exists( 'RR_CLASS_FOLDERS', $this->_variables ) ) {
-            
+        if( array_key_exists( 'RR_CLASS_FOLDERS', $this->_variables ) )
+        {
             $this->_skipDirectories += $this->trimExplode(
                 ',',
                 $this->_variables[ 'RR_CLASS_FOLDERS' ]
@@ -115,8 +116,8 @@ final class Romac
      */
     public static function getInstance()
     {
-        if( !is_object( self::$_instance ) ) {
-            
+        if( !is_object( self::$_instance ) )
+        {
             self::$_instance = new self();
         }
         
@@ -161,12 +162,12 @@ final class Romac
         );
     }
     
-    public function getClassName( $classSeparator = self::DEFAULT_CLASS_SEPARATOR, $prefix = true )
+    public function getClassName( $classSeparator = self::DEFAULT_CLASS_SEPARATOR, $prefix = TRUE )
     {
         $path = $this->_variables[ 'TM_FILEPATH' ];
         
-        if( !empty( $this->_variables[ 'TM_PROJECT_DIRECTORY' ] ) ) {
-            
+        if( !empty( $this->_variables[ 'TM_PROJECT_DIRECTORY' ] ) )
+        {
             $className = str_replace(
                 $this->_variables[ 'TM_PROJECT_DIRECTORY' ],
                 '',
@@ -176,19 +177,20 @@ final class Romac
             $className = str_replace( self::DS, $classSeparator, $className );
             $className = substr( $className, 1 );
         
-        } else {
-            
+        }
+        else
+        {
             $className = explode( self::DS, $path );
             $className = array_pop( $className );
         }
         
-        foreach( $this->_classSuffixes as $suffix ) {
-            
+        foreach( $this->_classSuffixes as $suffix )
+        {
             $className = str_replace( $suffix, '', $className );
         }
         
-        foreach( $this->_skipDirectories as $skipDirectory ) {
-            
+        foreach( $this->_skipDirectories as $skipDirectory )
+        {
             $className = str_replace( $skipDirectory . $classSeparator, '', $className );
         }
         
@@ -202,8 +204,8 @@ final class Romac
     
     public function getPackageName()
     {
-        if( isset( $this->_variables[ 'RR_PACKAGE' ] ) ) {
-            
+        if( isset( $this->_variables[ 'RR_PACKAGE' ] ) )
+        {
             return $this->_variables[ 'RR_PACKAGE' ];
         }
         
@@ -237,8 +239,8 @@ final class Romac
         
         array_pop( $fullClassNameParts );
         
-        if( !empty( $this->_variables[ 'RR_AVOID_2PREFIX' ] ) ) {
-            
+        if( !empty( $this->_variables[ 'RR_AVOID_2PREFIX' ] ) )
+        {
             array_shift( $fullClassNameParts );
         }
         
@@ -247,10 +249,10 @@ final class Romac
     
     public function getPrefix( $default = '' )
     {
-        foreach( $this->_prefixKeys as $key ) {
-            
-            if( !empty( $this->_variables[ $key ] ) ) {
-                
+        foreach( $this->_prefixKeys as $key )
+        {
+            if( !empty( $this->_variables[ $key ] ) )
+            {
                 return $this->_variables[ $key ];
             }
         }
@@ -280,14 +282,14 @@ final class Romac
         $explodedValues = explode( $delimiter, $string );
         $explodedValues = array_map( 'trim', $explodedValues );
         
-        if( $removeEmptyValues ) {
-            
+        if( $removeEmptyValues )
+        {
             $temp = array();
             
-            foreach( $explodedValues as $value ) {
-                
-                if( $value !== '' ) {
-                    
+            foreach( $explodedValues as $value )
+            {
+                if( $value !== '' )
+                {
                     $temp[] = $value;
                 }
             }
@@ -295,8 +297,8 @@ final class Romac
             $explodedValues = $temp;
         }
         
-        if( $limit !== 0 ) {
-            
+        if( $limit !== 0 )
+        {
             $explodedValues = array_slice( $explodedValues, 0, $limit );
         }
         

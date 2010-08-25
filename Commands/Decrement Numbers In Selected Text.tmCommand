@@ -14,7 +14,7 @@ print preg_replace_callback(
     '/(\d+)/',
     function( $matches )
     {
-        return $matches[ 0 ] + 1;
+        return $matches[ 0 ] - 1;
     },
     $text
 );</string>
@@ -25,10 +25,10 @@ print preg_replace_callback(
 	<key>keyEquivalent</key>
 	<string>^i</string>
 	<key>name</key>
-	<string>Increment Numbers In Selected Text</string>
+	<string>Decrement Numbers In Selected Text</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>uuid</key>
-	<string>E8C4405C-E789-4041-8BBA-B580136E13B5</string>
+	<string>E40D4B85-82A5-42BF-B2D6-AAA0608857A5</string>
 </dict>
 </plist>

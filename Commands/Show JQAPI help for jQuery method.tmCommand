@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+
+$method = '';
+$url    = 'http://jqapi.com/#p=%s';
+$vars   = array(
+    'TM_SELECTED_TEXT',
+    'TM_CURRENT_WORD'
+);
+
+foreach( $vars as $var )
+{
+    if( isset( $_ENV[ $var ] ) )
+    {
+        $method = $_ENV[ $var ];
+        break;
+    }
+}
+
+print '&lt;meta http-equiv="Refresh" content="0;URL=' . sprintf( $url, $method ) . '" /&gt;';</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>@H</string>
+	<key>name</key>
+	<string>Show JQAPI help for jQuery method</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>3D0DE2F3-6B08-4565-8036-14FA3FD64DA7</string>
+</dict>
+</plist>
