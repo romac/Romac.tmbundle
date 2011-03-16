@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>tx_apimacmade::debug( \$$0 );</string>
+	<string>t3lib_utility_Debug::debug( \$$1${2:, '[ ${3:HEADER} ]'} );</string>
 	<key>name</key>
 	<string>TYPO3 Debug</string>
 	<key>scope</key>
